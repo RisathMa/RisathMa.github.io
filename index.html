@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Audio Player</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Align logo and player vertically */
+            height: 100vh;
+            background-color: #f0f0f0; /* Light gray background */
+            font-family: Arial, sans-serif;
+        }
+        .logo {
+            width: 150px; /* Adjust the size of the logo */
+            margin-bottom: 20px; /* Space between the logo and player */
+        }
+        .audio-player {
+            background-color: #333; /* Dark background for the player */
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%; /* Adjust width as needed */
+            max-width: 600px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .audio-player audio {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- School Logo -->
+    <img src="untitled-3-modified (1).png" alt="School Logo" class="logo">
+
+    <!-- Audio Player -->
+    <div class="audio-player">
+        <audio controls autoplay>
+            <source src="http://<your-server-ip>:8000/stream" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</body>
+</html>
